@@ -1,10 +1,12 @@
 <?php
-class controller {
+class Controller {
 
 	protected $db;
+	protected $lang;
 
 	public function __construct() {
 		global $config;
+		$this->lang = new Language();
 	}
 	
 	public function loadView($viewName, $viewData = array()) {
@@ -22,3 +24,4 @@ class controller {
 	}
 
 }
+
